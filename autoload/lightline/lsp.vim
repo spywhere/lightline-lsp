@@ -20,7 +20,7 @@ function! lightline#lsp#infos() abort
   if !lightline#lsp#linted()
     return ''
   endif
-  let l:counts = luaeval('vim.lsp.diagnostic.get_count('.bufnr().', [[Info]])')
+  let l:counts = luaeval('vim.lsp.diagnostic.get_count('.bufnr().', [[Information]])')
   return l:counts == 0 ? '' : printf(s:indicator_infos . '%d', counts)
 endfunction
 
@@ -45,7 +45,7 @@ function! lightline#lsp#ok() abort
     return ''
   endif
   let l:hint_counts = luaeval('vim.lsp.diagnostic.get_count('.bufnr().', [[Hint]])')
-  let l:info_counts = luaeval('vim.lsp.diagnostic.get_count('.bufnr().', [[Info]])')
+  let l:info_counts = luaeval('vim.lsp.diagnostic.get_count('.bufnr().', [[Information]])')
   let l:warn_counts = luaeval('vim.lsp.diagnostic.get_count('.bufnr().', [[Warning]])')
   let l:error_counts = luaeval('vim.lsp.diagnostic.get_count('.bufnr().', [[Error]])')
   let l:counts = l:hint_counts+l:info_counts+l:warn_counts+l:error_counts
