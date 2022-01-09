@@ -106,6 +106,21 @@ let g:lightline#lsp#indicator_errors = "\uf05e"
 let g:lightline#lsp#indicator_ok = "\uf00c"
 ```
 
+## Contributes
+
+During the development, you can use the following command to automatically setup
+a working configurations to test the plugin against TSServer LSP...
+
+```
+make testrun
+```
+
+or
+
+```
+nvim -u tests/init.lua tests/sample.js
+```
+
 ## License
 
 Released under the [ISC License](LICENSE)
