@@ -3,7 +3,7 @@ let s:indicator_infos = get(g:, 'lightline#lsp#indicator_infos', 'I: ')
 let s:indicator_warnings = get(g:, 'lightline#lsp#indicator_warnings', 'W: ')
 let s:indicator_errors = get(g:, 'lightline#lsp#indicator_errors', 'E: ')
 let s:indicator_ok = get(g:, 'lightline#lsp#indicator_ok', 'OK')
-let s:update_in_insert = get(g:, 'lightline#lsp#update_in_insert', v:false)
+let s:update_in_insert = get(g:, 'lightline#lsp#update_in_insert', v:true)
 
 if !exists('s:hint')
   let s:hint = ''
@@ -25,7 +25,7 @@ endif
 " Lightline components
 
 function! s:skip_update_in_insert() abort
-  return s:update_in_insert && mode() == 'i'
+  return !s:update_in_insert && mode() == 'i'
 endfunction
 
 function! lightline#lsp#hints() abort
