@@ -79,7 +79,7 @@ The indicator to use when there are no diagnostic. Default is `OK`.
 
 ##### `g:lightline#lsp#update_in_insert`
 
-Update diagnostic in insert mode. Default is `v:false`.
+Update diagnostic in insert mode. Default is `v:true`.
 
 ### Using icons as indicators
 
