@@ -77,6 +77,10 @@ The indicator to use when there are errors. Default is `E:`.
 
 The indicator to use when there are no diagnostic. Default is `OK`.
 
+##### `g:lightline#lsp#update_in_insert`
+
+Update diagnostic in insert mode. Default is `v:false`.
+
 ### Using icons as indicators
 
 If you would like to replace the default indicators with symbols like on the screenshot, then you'll need to ensure you have some "iconic fonts" installed, such as [Font Awesome](https://fontawesome.com). A common alternative is to replace your primary font with one of the [Patched Nerd Fonts](https://github.com/ryanoasis/nerd-fonts), which saves you from having to install multiple fonts.
