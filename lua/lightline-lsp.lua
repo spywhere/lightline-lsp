@@ -1,7 +1,7 @@
 local M = {}
 
 local function is_lsp_attached()
-  return next(vim.lsp.buf_get_clients(0))
+  return next(vim.lsp.get_clients({buffer=0}))
 end
 
 local function get_count(buffer_number, diagnostic_type)
@@ -38,7 +38,7 @@ M._get_diagnostic_count = function (diagnostic_type)
     return 0
   end
 
-  local active_clients = vim.lsp.get_active_clients()
+  local active_clients = vim.lsp.get_clients()
   if vim.tbl_isempty(active_clients) then
     return 0
   end

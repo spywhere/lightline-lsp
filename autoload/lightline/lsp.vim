@@ -97,5 +97,5 @@ endfunction
 " Helper functions
 
 function! lightline#lsp#linted() abort
-  return !!luaeval('not vim.tbl_isempty(vim.lsp.buf_get_clients('.bufnr().'))')
+  return !!luaeval('not vim.tbl_isempty(vim.lsp.get_clients({buffer='.bufnr().'}))')
 endfunction
