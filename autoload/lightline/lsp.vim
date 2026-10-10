@@ -83,7 +83,6 @@ function! lightline#lsp#ok() abort
   if s:skip_update_in_insert()
     return s:ok
   endif
-  echom s:ok
   let l:hint_counts = luaeval("require('lightline-lsp')._get_diagnostic_count('hint')")
   let l:info_counts = luaeval("require('lightline-lsp')._get_diagnostic_count('info')")
   let l:warn_counts = luaeval("require('lightline-lsp')._get_diagnostic_count('warn')")
